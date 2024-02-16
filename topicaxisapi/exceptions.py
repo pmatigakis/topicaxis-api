@@ -1,0 +1,2 @@
+class TopicaxisApiError(Exception):
+    pass

@@ -1,0 +1,14 @@
+.idea/
+virtualenv/
+*.pyc
+topicaxisapi.egg-info/
+*.log
+.coverage
+cover/
+temp/
+.eggs/
+docs/build/
+utilities/test_environment/
+.env
+build/
+dist/

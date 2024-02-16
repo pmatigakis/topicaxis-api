@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "topicaxisapi"
+version = "0.26.0"
+description = "Topicaxis API service"
+authors = ["Matigakis Panagiotis <pmatigakis@gmail.com>"]
+license = "proprietary"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {version = "0.109.1", extras = ["all"]}
+sentry-sdk = {version = "1.4.1", extras = ["fastapi"]}
+uvicorn = {version = "0.20.0", extras = ["standard"]}
+gunicorn = "20.1.0"
+sqlalchemy = "2.0.25"
+alembic = "1.13.1"
+psycopg2-binary = "2.9.9"
+click = "8.1.7"
+pydantic-settings = "2.1.0"
+
+[tool.poetry.group.dev.dependencies]
+factory-boy = "3.3.0"
+pytest = "7.2.0"
+Faker = "16.4.0"
+pre-commit = "2.21.0"
+isort = "5.11.4"
+black = "22.12.0"
+flake8 = "6.0.0"
+bandit = "1.7.4"
+coverage = "7.0.5"
+bump2version = "1.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+
+[tool.poetry.scripts]
+poetry = 'poetry.console:run'
+topicaxisapi-cli = "topicaxisapi.cli.command:main"
