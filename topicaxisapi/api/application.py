@@ -50,7 +50,7 @@ def _add_routers(app: FastAPI):
 
 def _initialize_error_handlers(app):
     @app.exception_handler(RequestValidationError)
-    async def validation_exception_handler(
+    def validation_exception_handler(
         request: Request, exc: RequestValidationError
     ):
         return JSONResponse(
@@ -59,7 +59,7 @@ def _initialize_error_handlers(app):
         )
 
     @app.exception_handler(ArticleSearchError)
-    async def article_search_error_handler(
+    def article_search_error_handler(
         request: Request, exc: ArticleSearchError
     ):
         return JSONResponse(

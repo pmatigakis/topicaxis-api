@@ -18,7 +18,7 @@ router = APIRouter(dependencies=[Depends(dependencies.get_api_key)])
     summary="Get the tags",
     description="Get the available tags",
 )
-async def get_tags(
+def get_tags(
     session: Session = Depends(dependencies.get_session),
 ) -> Tags:
     repository = TagRepository(session)

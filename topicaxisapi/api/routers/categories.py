@@ -20,7 +20,7 @@ router = APIRouter(dependencies=[Depends(dependencies.get_api_key)])
     summary="Get categories",
     description="Get the available categories",
 )
-async def get_categories(
+def get_categories(
     session: Session = Depends(dependencies.get_session),
 ) -> Categories:
     logger.info("Retrieving available categories")

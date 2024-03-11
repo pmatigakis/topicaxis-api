@@ -18,7 +18,7 @@ router = APIRouter(dependencies=[Depends(dependencies.get_api_key)])
     summary="Get the channels",
     description="Get the available channels",
 )
-async def get_channels(
+def get_channels(
     session: Session = Depends(dependencies.get_session),
 ) -> Channels:
     channel_repository = ChannelRepository(session)

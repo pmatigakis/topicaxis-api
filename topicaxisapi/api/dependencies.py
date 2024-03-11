@@ -36,7 +36,7 @@ def get_session(engine: Engine = Depends(get_engine)) -> Session:
         session.close()
 
 
-async def get_api_key(
+def get_api_key(
     api_key: Annotated[str, Security(apikey_scheme)],
     session: Session = Depends(get_session),
 ):

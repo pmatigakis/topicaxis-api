@@ -18,7 +18,7 @@ router = APIRouter(dependencies=[Depends(dependencies.get_api_key)])
     summary="Get the sources",
     description="Get the available sources",
 )
-async def get_sources(
+def get_sources(
     session: Session = Depends(dependencies.get_session),
     offset: int
     | None = Query(

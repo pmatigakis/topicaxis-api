@@ -23,7 +23,7 @@ router = APIRouter(dependencies=[Depends(dependencies.get_api_key)])
     summary="Get articles",
     description="Get articles that have been published",
 )
-async def search_articles(
+def search_articles(
     query: str
     | None = Query(
         default=None,
