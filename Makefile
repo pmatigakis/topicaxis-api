@@ -8,7 +8,7 @@ docker:
 	scripts/build_docker_images.sh
 
 release-patch:
-	scripts/release_topicaxisapi.sh patch
+	scripts/release_api.sh patch
 
 release-minor:
-	scripts/release_topicaxisapi.sh minor
+	scripts/release_api.sh minor
