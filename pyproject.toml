@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "topicaxisapi"
-version = "0.26.0"
+version = "0.27.0"
 description = "Topicaxis API service"
 authors = ["Matigakis Panagiotis <pmatigakis@gmail.com>"]
 license = "proprietary"
